@@ -3,38 +3,28 @@
 #include <stdio.h>
 
 /**
- * main - generates a random number and prints its last digit
+ * main - Determines either greater than 5, is less than 6, or is 0
  *
- * Return: 0 if the program completes successfully
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n;
+	int n, l;
 
-	/* Initializes the random number generator with the current time */
 	srand(time(0));
-
-	/* Generate a random integer between -2147483647 and +2147483647 */
 	n = rand() - RAND_MAX / 2;
-
-	/* Get the last digit of the random integer using modulus */
-	int last_digit = n % 10;
-
-	/* Prints the last digit of the random integer and its value */
-	printf("Last digit of %d is ", n);
-
-	if (last_digit > 5)
-{
-	printf("%d and is greater than 5\n", last_digit);
-}
-	else if (last_digit == 0)
-{
-	printf("%d and is 0\n", last_digit);
-}
+	l = n % 10;
+	if (l > 5)
+	{
+		printf("Last digit of %d is %d and is greater than 5\n", n, l);
+	}
+	else if (l == 0)
+	{
+		printf("Last digit of %d is %d and is 0\n", n, l);
+	}
 	else
-{
-	printf("%d and is less than 6 and not 0\n", last_digit);
-}
-
+	{
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, l);
+	}
 	return (0);
 }
