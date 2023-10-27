@@ -3,7 +3,8 @@
 /**
  *binary_to_uint - converting binary to unit
  *unsigned int -.
- *@b- const binary
+ *@b:- const binary
+ *Return: 0 sucsess
  */
 unsigned int binary_to_uint(const char *b)
 {
