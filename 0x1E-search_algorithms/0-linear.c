@@ -14,7 +14,7 @@ int linear_search(int *array, size_t size, int value)
 {
 	size_t x;
 
-	if(array == NULL || size == 0)
+	if(array == NULL)
 		return (-1);
 
 
@@ -22,7 +22,6 @@ int linear_search(int *array, size_t size, int value)
 	{
          if(array[x]== value)
         {
-            printf("Found [%ld] at index: [%d]\n", x, array[x]);
             return x;
         }
         
